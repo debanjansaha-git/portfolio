@@ -4250,6 +4250,16 @@ input, select, textarea {
 			color: #e2e2e2;
 		}
 
+		#footer .icon {
+			font-size: 20px;
+		}
+		
+		#footer .love .icon {
+			font-size: 12px;
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+
 		#footer > section {
 			-moz-flex-basis: 50%;
 			-webkit-flex-basis: 50%;
