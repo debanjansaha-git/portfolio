@@ -6,6 +6,10 @@
 
 (function($) {
 
+	function scrollToTop() {
+		$('html, body').animate({ scrollTop: 0 }, 'slow');
+	  }
+
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -254,5 +258,20 @@
 			});
 
 		}
-
+		
+  // Check if the user has scrolled past a certain point
+  $window.on('scroll', function() {
+    if ($(this).scrollTop() > 100) { // Adjust 100 to your desired threshold
+      // Show the scroll to top button
+      $('#scrollToTopBtn').fadeIn();
+    } else {
+      // Hide the scroll to top button
+      $('#scrollToTopBtn').fadeOut();
+    }
+  });
+  
+  // Trigger scroll to top when the button is clicked
+  $('#scrollToTopBtn').on('click', function() {
+    scrollToTop();
+  });
 })(jQuery);

@@ -4457,6 +4457,36 @@ input, select, textarea {
 
 		}
 
+		#scrollToTopBtn {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			background-color: #c23239;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 15px;
+			cursor: pointer;
+		  }
+		  
+		  #scrollToTopBtn:hover {
+			background-color: #b30000;
+		  }
+		  
+		  #scrollToTopBtn::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+			width: 12px;
+			height: 12px;
+			border-left: 2px solid #fff;
+			border-top: 2px solid #fff;
+			background-color: transparent;
+		  }
+		  
 	#copyright {
 		color: #ffffff;
 		position: relative;
